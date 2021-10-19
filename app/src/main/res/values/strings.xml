@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculadora 2</string>
+    <string name="button">Calcular</string>
+    <string name="stringResultado">Resultado</string>
+    <string name="stringDigitar">Digite N1</string>
+    <string name="stringDigitar2">Digite N2</string>
+    <string name="EnviarMensagem">EnviarMensagem</string>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    //View "Calculadora"
+
+    <TextView
+        android:id="@+id/TextoCalculadora"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="85dp"
+        android:text="Calculadora"
+        android:textSize="45dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/n1"
+        android:layout_width="120dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="70dp"
+        android:ems="10"
+        android:hint="@string/stringDigitar"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/TextoCalculadora"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+    <EditText
+        android:id="@+id/n2"
+        android:layout_width="120dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="210dp"
+        android:ems="10"
+        android:hint="@string/stringDigitar2"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/TextoCalculadora"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/GrupoRadioComandos"
+        android:layout_width="116dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="140dp"
+        android:checkedButton="@id/RadioSoma"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextoCalculadora"
+        >
+
+        <RadioButton
+            android:id="@+id/RadioSoma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soma" />
+
+        <RadioButton
+            android:id="@+id/RadioMultiplicacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multiplicação" />
+
+        <RadioButton
+            android:id="@+id/radioDivisao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Divisão" />
+
+        <RadioButton
+            android:id="@+id/radioSubtracao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtração" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/TextoResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:text="Resultado ="
+        android:textSize="33dp"
+        app:layout_constraintEnd_toStartOf="@+id/resultado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/GrupoRadioComandos"
+        />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="147dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:hint="@string/stringResultado"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GrupoRadioComandos"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/calcular"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="135dp"
+        android:layout_height="0dp"
+        android:text="Calcular"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextoResultado"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
